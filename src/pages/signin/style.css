@@ -1,3 +1,4 @@
+
 .login {
   height: 100vh;
   overflow: hidden;
@@ -10,6 +11,10 @@
 .login-img{
   object-fit: cover;
   width: 100%;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
 }
 
 .header h1 {
@@ -75,15 +80,34 @@
 }
 
 .login-form .login-btn {
-  width: 100%;
-  height: 46px;
-  background: #58311C;
+  background: #58311C ;
   border-radius: 8px;
   color: #fff;
   border: none;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
 }
+
+.login-form .login-btn:hover {
+  background: #813e1a ;
+  color: #fff;
+}
+
+.login-form .login-btn:focus {
+  background: #813e1a ;
+  color: #fff;
+}
+
+.login-form .login-btn:visited {
+  background: #813e1a ;
+  color: #fff;
+}
+
+.login-form .login-btn:active {
+  background: #813e1a !important;
+  color: #fff;
+}
+
 
 .google-btn{
   border-radius: 8px;

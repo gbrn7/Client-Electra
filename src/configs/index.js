@@ -1,4 +1,4 @@
-const config = {
-  api_host_dev: process.env.REACT_APP_HOST_DEV,
+const configs = {
+  api_host_dev: import.meta.env.VITE_REACT_APP_HOST_DEV,
 }
-export { config };
+export { configs };
