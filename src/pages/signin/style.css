@@ -1,0 +1,130 @@
+.login {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  width: 250px;
+}
+
+.login-img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 111%;
+  letter-spacing: -0.07em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+@media (max-width: 575.98px) {
+  .header h1  {
+      font-size: 20px;
+  }
+}
+
+.login-form label {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.login-form input {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: #736A6A;
+
+}
+
+.password-container{
+  position: relative;
+}
+
+.pass-wrapper{
+  position: relative;
+}
+
+.pass-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  right: 6px;
+  top: 4px;
+}
+
+.login-form span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.login-form .login-btn {
+  width: 100%;
+  height: 46px;
+  background: #58311C;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.google-btn{
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.26);
+}
+
+
+@media (max-width: 1400px){
+  .login-img {
+      margin-left: -90px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header h1  {
+      font-size: 20px;
+  }
+  .pass-icon {
+      width: 15px;
+      height: 15px;
+      right: 6px;
+      top: 8px;
+  }
+  .login-form label{
+      font-size: 10px;
+  }
+  .login-form input {
+      font-size: 10px;
+  }
+  .login-form span {
+      font-size: 8px;
+  }
+  .login-btn{
+      font-size: 12px;
+  }
+  .google-btn{
+      font-size: 12px;
+  }
+}
