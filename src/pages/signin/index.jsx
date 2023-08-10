@@ -6,8 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import EAlert from '../../components/Alert';
 import { postData } from '../../utils/fetch';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../../redux/auth/actions';
 
 export default function PageSignin() {
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -34,6 +37,8 @@ export default function PageSignin() {
     const res = await postData('/admins/auth/signin', form);
     if(res?.data?.data){
       setIsLoading(false);
+
+      dispatch(userLogin(res.data.data.token, res.data.data.role, res.data.data.refreshToken, res.data.data.email))
 
       navigate('/');
     }else{

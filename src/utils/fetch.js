@@ -25,7 +25,6 @@ export async function postData(url, payload, formData) {
       ? JSON.parse(localStorage.getItem('auth'))
       : {};
 
-
     return await axios.post(`${configs.api_host_dev}${url}`, payload, {
       headers: {
         Authorization: `Bearer ${token}`,
