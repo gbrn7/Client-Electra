@@ -1,11 +1,17 @@
 import store from "./store";
 
-let currentAuth = localStorage.getItem('auth');
+let currentAuth;
 
 function listener() {
   let previousAuth = currentAuth;
 
+  // console.log('previousAuth')
+  // console.log(previousAuth)
+
   currentAuth = store.getState().auth;
+
+  // console.log('currentAuth')
+  // console.log(currentAuth)
 
   if (currentAuth !== previousAuth) {
     localStorage.setItem('auth', JSON.stringify(currentAuth));
