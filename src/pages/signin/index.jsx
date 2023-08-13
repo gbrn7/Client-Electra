@@ -1,7 +1,7 @@
 import Eform from './form';
 import './style.css'
 import logo from '../../assets/img/logo.svg';
-import adminHero from '../../assets/img/adminHero.jpg'
+import adminHero from '../../assets/img/adminHero.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import EAlert from '../../components/Alert';
