@@ -5,26 +5,35 @@ import ECard from '../../components/ECard';
 import cardOneBg from '../../assets/img/layer-1.svg';
 import cardTwoBg from '../../assets/img/layer-2.svg';
 import cardThreeBg from '../../assets/img/layer-3.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDashboardNewOrder, fetchDashboardRevenue, fetchDashboardTotalOrder } from '../../redux/dashboard/actions';
 
 function Dashboard() {
+  const dispatch = useDispatch();
+
+  const datas = useSelector((state) => state.dashboard);
 
   useEffect(() => 
   {
-    new PureCounter()
+    Promise.all([
+        dispatch(fetchDashboardRevenue()),
+        dispatch(fetchDashboardTotalOrder()),
+        dispatch(fetchDashboardNewOrder()),
+    ]).then(() => new PureCounter)
 }, 
-  []);
+  [ ]);
 
 
-  return ( 
+  return (
     <section className="content h-100 w-100  main">
     <div className="container-fluid  m-0">
         <div className="row row-1 ">
           <div className="col-12 title">Dashboard</div>
         </div>
         <div className="row row-2 d-flex gap-2  mt-2">
-            <ECard value={230000000} backgroundImage={cardOneBg} icon={'bx bx-money-withdraw'} currency={'Rp.'} title={'Total Revenue'}/>
-            <ECard value={45678} backgroundImage={cardTwoBg} icon={'bx bxs-package'} title={'Total Order'}/>
-            <ECard value={58} backgroundImage={cardThreeBg} icon={'bx bx-shopping-bag'} title={'New OrderOrder'}/>
+            <ECard value={datas.revenue} backgroundImage={cardOneBg} icon={'bx bx-money-withdraw'} currency={'Rp.'} title={'Total Revenue'}/>
+            <ECard value={datas.totalOrder} backgroundImage={cardTwoBg} icon={'bx bxs-package'} title={'Total Orders'}/>
+            <ECard value={datas.newOrder} backgroundImage={cardThreeBg} icon={'bx bx-shopping-bag'} title={'New Orders'}/>
         </div>
         <div className="row  row-3 mt-2 gap-3">
         <div className="col-11 col-lg-5 bg-white table-wrapper mt-2  p-2 border-dark rounded-3">

@@ -1,5 +1,4 @@
 import thunk from 'redux-thunk';
-import authReducer from './auth/reducer';
 import {
   applyMiddleware,
   combineReducers,
@@ -8,9 +7,13 @@ import {
 
 const composerEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+import authReducer from './auth/reducer';
+import dashboardReducer from './dashboard/reducer';
+
 
 const rootReducers = combineReducers({
   auth: authReducer,
+  dashboard: dashboardReducer,
 });
 
 const store = createStore(

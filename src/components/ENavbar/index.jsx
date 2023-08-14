@@ -23,8 +23,6 @@ function ENavbar() {
 
   const navlinkHandler= (url, event) => {
     const tes = $("nav .active").removeAttr('.active');
-    console.log(tes);
-    console.log();
     // navigate(`/${url}`);
   }
 
