@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import  '../../assets/Vendor/boxicons-master/css/boxicons.min.css';
 import  '../../assets/Vendor/RemixIcon-master/fonts/remixicon.css';
 import './style.css'
 import HeaderSidebar from "../HeaderSidebar";
 import logo from '../../assets/img/logo.svg';
 import NavLink from "../Navlink";
+import $ from "jquery";
 
 
 function ENavbar() {
@@ -20,6 +21,12 @@ function ENavbar() {
     localStorage.setItem('toggleState', !toggleState);
   }
 
+  const navlinkHandler= (url, event) => {
+    const tes = $("nav .active").removeAttr('.active');
+    console.log(tes);
+    console.log();
+    // navigate(`/${url}`);
+  }
 
   const fetchDataAuth = () =>{
     let {role} = localStorage.getItem('auth')
@@ -51,10 +58,10 @@ function ENavbar() {
       <div className="menu-bar h-100 d-flex justify-content-between flex-column">
         <div className="menu d-flex flex-column h-100 justify-content-between"> 
           <ul className="menu-links d-flex flex-column gap-2">
-            <NavLink active iconClass={'bx bx-home'} action={() => navigate('/')}>Dashboard</NavLink>
-            <NavLink iconClass={'bx bx-coffee-togo'} action={() => navigate('/product')}>Product Data</NavLink>
-            <NavLink iconClass={'bx bxs-wallet'} action={() => navigate('/transactions')}>Transaction Data</NavLink>
-            <NavLink iconClass={'bx bx-calendar-event'} action={() => navigate('/Schedule')}>Transaction Data</NavLink>
+            <NavLink iconClass={'bx bx-home'} action={navlinkHandler('')}>Dashboard</NavLink>
+            <NavLink iconClass={'bx bx-coffee-togo'} action={navlinkHandler('product')}>Product Data</NavLink>
+            <NavLink iconClass={'bx bxs-wallet'} action={navlinkHandler('transactions')}>Transaction Data</NavLink>
+            <NavLink iconClass={'bx bx-calendar-event'} action={navlinkHandler('schedule')}>Schedule</NavLink>
           </ul>
           <div className="bottom-content ">
             <ul>

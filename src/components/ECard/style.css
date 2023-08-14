@@ -1,0 +1,38 @@
+.content .row-2 .card {
+  background: url(../../assets/img/layer-1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content .row-2 .card .head i {
+  background-color: rgb(145, 145, 145) !important;
+  color: rgb(255, 255, 255);
+}
+.content .row-2 .card .head span {
+  letter-spacing: -0.04em;
+  font-size: 15px;
+}
+@media (max-width: 991.98px) {
+  .content .row-2 .card .head {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767.98px) {
+  .content .row-2 .card .head {
+    font-size: 10px;
+  }
+}
+.content .row-2 .card .content-text p {
+  font-size: 28px;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+@media (max-width: 991.98px) {
+  .content .row-2 .card .content-text p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .content .row-2 .card .content-text p {
+    font-size: 17px;
+  }
+}

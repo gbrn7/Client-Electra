@@ -24,8 +24,8 @@ export default function AppRoutes() {
           </>
         }
       >
-        <Route path="" element={<Navigate to="/dashboard" replace={true}/>}/>
         <Route path="dashboard/*" element={<Dashboard/>}/>
+        <Route path="" element={<Navigate to="/dashboard" replace={true}/>}/>
       </Route>
     </Routes>
   )

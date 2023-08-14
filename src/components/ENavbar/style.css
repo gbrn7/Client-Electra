@@ -108,6 +108,7 @@ body.dark .content .row-4 .table-wrapper p {
   transition: var(--tran-02);
   z-index: 100;
   border-radius: 0 20px 20px 0;
+  z-index: 1000;
 }
 .sidebar header {
   position: relative;
