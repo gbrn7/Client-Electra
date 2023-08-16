@@ -15,7 +15,7 @@ import {
     fetchDashboardWorstSelling } from '../../redux/dashboard/actions';
 import ETable from '../../components/ETable';
 
-function Dashboard() {
+function DashboardRoute() {
   const dispatch = useDispatch();
 
   const datas = useSelector((state) => state.dashboard);
@@ -37,7 +37,6 @@ function Dashboard() {
 
   return (
     <section className="content h-100 w-100  main">
-    {console.log(datas.schedule)};
     <div className="container-fluid  m-0">
         <div className="row row-1 ">
           <div className="title">Dashboard</div>
@@ -86,4 +85,4 @@ function Dashboard() {
    );
 }
 
-export default Dashboard;
+export default DashboardRoute;

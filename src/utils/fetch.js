@@ -58,7 +58,7 @@ export async function deleteData(url) {
       ? JSON.parse(localStorage.getItem('auth'))
       : {};
 
-    return await axios.delete(`${configs.api_host_dev}${url}`, payload, {
+    return await axios.delete(`${configs.api_host_dev}${url}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

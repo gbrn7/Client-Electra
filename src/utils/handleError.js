@@ -33,7 +33,7 @@ const handleError = (err) => {
       })
   }
 
-  return err;
+  throw err;
 }
 
 export default handleError;

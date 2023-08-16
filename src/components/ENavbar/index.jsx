@@ -22,8 +22,8 @@ function ENavbar() {
   }
 
   const navlinkHandler= (url, event) => {
-    const tes = $("nav .active").removeAttr('.active');
-    // navigate(`/${url}`);
+    // const tes = $("nav .active").removeAttr('.active');
+    navigate(`/${url}`);
   }
 
   const fetchDataAuth = () =>{
@@ -56,10 +56,10 @@ function ENavbar() {
       <div className="menu-bar h-100 d-flex justify-content-between flex-column">
         <div className="menu d-flex flex-column h-100 justify-content-between"> 
           <ul className="menu-links d-flex flex-column gap-2">
-            <NavLink iconClass={'bx bx-home'} action={navlinkHandler('')}>Dashboard</NavLink>
-            <NavLink iconClass={'bx bx-coffee-togo'} action={navlinkHandler('product')}>Product Data</NavLink>
-            <NavLink iconClass={'bx bxs-wallet'} action={navlinkHandler('transactions')}>Transaction Data</NavLink>
-            <NavLink iconClass={'bx bx-calendar-event'} action={navlinkHandler('schedule')}>Schedule</NavLink>
+            <NavLink iconClass={'bx bx-home'} destination={'/'}>Dashboard</NavLink>
+            <NavLink iconClass={'bx bx-coffee-togo'} destination={'/products'}>Data Products</NavLink>
+            <NavLink iconClass={'bx bxs-wallet'} destination={'/transactions'}>Data Transaction</NavLink>
+            <NavLink iconClass={'bx bx-calendar-event'} destination={'/schedule'}>Data Schedule</NavLink>
           </ul>
           <div className="bottom-content ">
             <ul>

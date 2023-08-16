@@ -1,0 +1,59 @@
+.content {
+  position: relative;
+  left: 240px;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+}
+.content .dataTables_filter {
+  text-align: center;
+  padding-right: 25px;
+}
+.content .dataTables_filter label {
+  text-align: left;
+  display: inline-block;
+  white-space: nowrap;
+}
+.content .dataTables_filter input {
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+.content .dataTables_length label {
+  text-align: left;
+  white-space: nowrap;
+}
+.content .dataTables_length label select {
+  display: inline-block;
+}
+.content .title {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -0.055em;
+}
+.content .table {
+  font-family: "Poppins", sans-serif;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+.content .table tbody tr td {
+  font-size: 15px;
+}
+.content .table tbody tr td img {
+  max-width: 70px;
+}
+.content .pagination {
+  --bs-pagination-focus-box-shadow:0 0 0 0.25rem rgb(0 0 0 / 25%);
+  justify-content: center;
+}
+.content .pagination .paginate_button {
+  border-color: white;
+}
+.content .pagination .paginate_button a {
+  color: black;
+}
+.content .pagination .paginate_button.active a {
+  background-color: black;
+  color: white;
+  z-index: 1;
+  border-color: white;
+}
