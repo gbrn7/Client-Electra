@@ -34,6 +34,7 @@ const handleError = (err) => {
   }
 
   throw err;
+  // return err;
 }
 
 export default handleError;

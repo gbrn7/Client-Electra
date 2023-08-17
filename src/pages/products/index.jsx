@@ -9,6 +9,7 @@ import { setNotif } from "../../redux/notif/actions";
 import EAlert from "../../components/Alert";
 import EButton from "../../components/Button";
 import { useNavigate } from "react-router-dom";
+import "./styleCreate.css";
 
 function Products() {
   const dispatch = useDispatch();
@@ -60,7 +61,7 @@ function Products() {
           children={"Create Product"}
           size={"md"}
           classname={"mb-2"}
-          action={() => navigate("product/create")}
+          action={() => navigate("create")}
         />
       </div>
 

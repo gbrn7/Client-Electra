@@ -1,7 +1,17 @@
 import { Alert } from "react-bootstrap";
 
 function EAlert({ message, type }) {
-  return (<Alert variant={type}>{message}</Alert>);
+  const err = message.split(",");
+
+  return (
+    <Alert variant={type}>
+      <ul>
+        {err.map((item, index) => {
+          return <li key={index}>{item}</li>;
+        })}
+      </ul>
+    </Alert>
+  );
 }
 
 export default EAlert;

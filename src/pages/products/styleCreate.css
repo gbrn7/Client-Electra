@@ -1,0 +1,24 @@
+.content {
+  position: relative;
+  left: 240px;
+  padding-top: 110px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.content .title {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -0.055em;
+}
+.content .card {
+  background-color: var(--sidebar-color);
+}
+.content .card .card-body input {
+  background-color: var(--sidebar-color);
+}
+.content .card .card-body textarea {
+  background-color: var(--sidebar-color);
+}
+.content .card .card-body select {
+  background-color: var(--sidebar-color);
+}
